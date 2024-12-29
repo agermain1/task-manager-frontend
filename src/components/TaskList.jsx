@@ -59,6 +59,7 @@ const TaskList = () => {
                   task={task}
                   updateTaskStatus={handleUpdateTaskStatus}
                   deleteTask={removeTaskById}
+                  editTask={editTaskById}
                 />
               ))
             )}

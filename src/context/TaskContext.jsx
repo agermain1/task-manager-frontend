@@ -26,10 +26,8 @@ export const TaskProvider = ({ children }) => {
   // Funciones CRUD
   const addNewTask = async (newTask) => {
     try {
-  console.log('entre', newTask)
 
       const data = await addTask(newTask);
-  console.log('entre data', data)
 
       setTasks((prevTasks) => [...prevTasks, data]);
     } catch (error) {

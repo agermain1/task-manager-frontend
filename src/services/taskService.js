@@ -8,7 +8,6 @@ export const getTasks = async () => {
 };
 
 export const addTask = async (task) => {
-  console.log('entre')
   const response = await axios.post(API_URL, task);
   return response.data;
 };
