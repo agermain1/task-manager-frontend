@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Modal from './Modal';
 
 const Task = ({ task, updateTaskStatus, deleteTask, editTask }) => {
-  const { _id, title, description, completed } = task;
+  const { _id, title, description, completed, createdAt } = task;
   const [isModalOpen, setModalOpen] = useState(false);
   const [isDeleteModalOpen, setDeleteModalOpen] = useState(false);
   const [isEditModalOpen, setEditModalOpen] = useState(false);
@@ -41,6 +41,15 @@ const Task = ({ task, updateTaskStatus, deleteTask, editTask }) => {
     }
   };
 
+  // Formatear la fecha de creación a dd/mm/yyyy
+  const formatDate = (date) => {
+    const d = new Date(date);
+    const day = String(d.getDate()).padStart(2, '0');
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const year = d.getFullYear();
+    return `${day}/${month}/${year}`;
+  };
+
   return (
     <tr className="hover:bg-gray-50">
       <td className="border border-gray-300 px-4 py-2">{title}</td>
@@ -61,6 +70,7 @@ const Task = ({ task, updateTaskStatus, deleteTask, editTask }) => {
           <span className="text-gray-800">Does not own</span>
         )}
       </td>
+      <td className="border border-gray-300 px-4 py-2">{formatDate(createdAt)}</td>
       <td className="border border-gray-300 px-4 py-2 text-center space-x-4">
         <button className="text-green-500 font-bold text-lg" onClick={toggleEditModal}>
           &#9998;
