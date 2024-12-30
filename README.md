@@ -24,6 +24,11 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente en tu sistema:
 
 ## ⚙️ Configuración del Entorno
 
+
+Para ejecutar este proyecto de manera local, debes crear un archivo .env en la raíz del proyecto con las siguientes variables:
+
+REACT_APP_API_URL= "AQUÍ REEMPLAZA CON TU URL DEL SERVIDOR BACKEND"
+
 1. **Clona el Repositorio:**
    ```bash
    git clone https://github.com/tu-usuario/task-manager-frontend.git
