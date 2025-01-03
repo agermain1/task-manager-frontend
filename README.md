@@ -31,7 +31,7 @@ REACT_APP_API_URL= "AQUÍ REEMPLAZA CON TU URL DEL SERVIDOR BACKEND"
 
 1. **Clona el Repositorio:**
    ```bash
-   git clone https://github.com/tu-usuario/task-manager-frontend.git
+   git clone https://github.com/agermain1/task-manager-frontend.git
    cd task-manager-frontend
 
 
